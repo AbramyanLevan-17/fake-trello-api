@@ -71,7 +71,9 @@ module.exports = {
       }
       return user
       .destroy()
-      .then(()=>res.status(204).send())
+      .then(()=>res.status(204).send({
+        message:'Was succesfully deleted'
+      }))
       .catch(err=>res.status(400).send(err))
     })
   }
