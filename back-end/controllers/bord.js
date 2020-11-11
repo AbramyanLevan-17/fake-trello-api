@@ -66,7 +66,8 @@ module.exports ={
       }
       return board
       .update({
-        board_name: req.body.board_name || board.board_name
+        board_name: req.body.board_name || board.board_name,
+        user_id: req.body.user_id || board.user_id
       })
       .then(()=>res.status(200).send(board))
       .catch(err=>res.status(400).send(err))

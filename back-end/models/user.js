@@ -14,6 +14,8 @@ module.exports = (sequelize, DataTypes) => {
       User.hasMany(models.Board,{
         foreignKey: 'user_id',
         as: 'boards',
+        onDelete: 'CASCADE',
+        hooks: true, 
       })
     }
   };

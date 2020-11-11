@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
       List.belongsTo(models.Card,{
         foreignKey: 'card_id',
-        as: 'card'
+        as: 'card',
       })
     }
   };

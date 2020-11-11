@@ -13,11 +13,13 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
       Card.belongsTo(models.Board,{
         foreignKey: 'board_id',
-        as:'board'
+        as:'board',
       })
       Card.hasMany(models.List,{
         foreignKey: 'card_id',
-        as: 'lists'
+        as: 'lists',
+        onDelete: 'CASCADE',
+        hooks: true, 
       })
     }
   };
