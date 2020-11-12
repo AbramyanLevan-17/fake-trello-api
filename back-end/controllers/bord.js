@@ -14,7 +14,7 @@ module.exports ={
         as: 'cards'
       }],
     })
-    .then(boards=>res.status(200).status(boards))
+    .then(boards=>res.status(200).send(boards))
     .catch(err=>{res.status(400).send(err)})
   },
   getById(req,res){
